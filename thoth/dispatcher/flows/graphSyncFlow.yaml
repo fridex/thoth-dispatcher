@@ -1,0 +1,11 @@
+flow-definition:
+  - name: graphFlowSync
+    queue: graphFlowSync_v0
+    nowait: GraphSyncTask
+    sampling:
+      name: constant
+      args:
+        retry: 10
+    edges:
+      - from:
+        to: GraphSyncTask
